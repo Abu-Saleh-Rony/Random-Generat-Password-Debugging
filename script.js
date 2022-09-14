@@ -10,6 +10,7 @@ const getElement = (id) => {
 const handleSlider = (event) => {
   const charCountEl = getElement("char-count");
   charCountEl.innerText = event;
+  generatePassword();
 };
 
 const handleCheckbox = () => {
@@ -50,6 +51,7 @@ const handleViewPassword = () => {
   const passwordEl = getElement("password");
   const view = getElement("view-check");
   const viewIcon = getElement("view-icon");
+
 
   if (view.checked === true) {
     passwordEl.setAttribute("type", "text");
